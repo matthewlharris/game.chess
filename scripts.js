@@ -113,7 +113,7 @@ $('#rotate-button').click(function(){
 });
 
 
-// get game url
+// get game url function
 function get_url(){
 	url = 'existing_game=Y';
 	$('.square').each(function(){
@@ -126,6 +126,7 @@ function get_url(){
 	});
 }
 
+// get game url on button click
 $('#get-url-button').click(function(){
 	get_url();
 	$('#game-url-popup').css('display', 'block');
@@ -133,12 +134,12 @@ $('#get-url-button').click(function(){
 	$('#game-url-popup textarea').select();
 });
 
-// close url popup
+// close url popup on button click
 $('#close-url-popup').click(function(){
 	$('#game-url-popup').css('display', 'none');
 });
 
-//
+// close url popup on esc keypress
 $(window).keypress(function(e){
 	if( e.keyCode == '27' ){
 		$('#game-url-popup').css('display', 'none');
