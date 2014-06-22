@@ -72,6 +72,13 @@ $('.square').click(function(){
 			moving_square = $(this).attr('id');
 		}
 	}else if( ready_to_move == 'Y' ){
+		var moving_square_color = $('#' + moving_square).find('.piece').attr('data-color');
+		var new_square_color = $(this).find('.piece').attr('data-color');
+		if( moving_square_color == new_square_color ){
+			moving_square = $(this).attr('id');
+			active_piece_html = $(this).html();
+			return false;
+		}
 		get_url();
 		previous_url = url;
 		if( $(this).attr('data-occupied') == 'Y' ){
