@@ -1,11 +1,25 @@
 html, body{
 	margin: 0;
 	font-family: Helvetica, sans-serif;
-	background: url(light.gray.png);
+	background: url(/game.chess/light.gray.png);
 }
 
 .mega-octicon{
 	line-height: 50px;
+}
+
+#ajax-spinner{
+	display: none;
+	z-index: 1100;
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	box-shadow: 0 0 6px;
+	-webkit-transform: translate(-50%);
+	        transform: translate(-50%);
+	border-radius: 10px;
+	background: #fff;
+	padding: 20px;
 }
 
 #board{
@@ -13,7 +27,7 @@ html, body{
 	position: fixed;
 	box-shadow: #444 0 0 20px;
 	background: #666;
-	top: 10px;
+	top: 45%;
 	left: 50%;
 
 	-webkit-transform-origin: top left;
@@ -21,8 +35,8 @@ html, body{
 }
 
 .new-board{
-	-webkit-transform: translate(-50%);
-	transform: translate(-50%);
+	-webkit-transform: rotate(0deg) translate(-50%, -50%);
+	transform: rotate(0deg) translate(-50%, -50%);
 }
 
 #menu{
@@ -135,16 +149,16 @@ html, body{
 }
 
 .piece {
-position: relative;
-cursor: pointer;
-left: 50%;
-top: 50%;
+	position: relative;
+	cursor: pointer;
+	left: 50%;
+	top: 50%;
 
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
+	-webkit-transform: rotate(0deg) translate(-50%, -50%);
+	transform: rotate(0deg) translate(-50%, -50%);
 
--webkit-transform-origin: top left;
-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
 }
 
 .rotate-piece{
@@ -153,17 +167,18 @@ transform-origin: top left;
 }
 
 .rotate-board{
-	-webkit-transform: rotate(180deg) translate(-50%);
-	transform: rotate(180deg) translate(-50%);
+	-webkit-transform: rotate(180deg) translate(-50%, -50%);
+	transform: rotate(180deg) translate(-50%, -50%);
 }
 
+/*==========================*/
 /*==========================*/
 @media all and (min-width: 470px){
 	#menu{
 		left: calc(100% - 50px);
 		top: 50%;
 		width: 50px;
-		height: 250px;
+		height: 300px;
 		-webkit-transform: translate(0, -50%);
 		transform: translate(0, -50%);
 	}
@@ -179,34 +194,7 @@ transform-origin: top left;
 	}
 
 	#board{
-		left: 5px;
 		top: 50%;
-	}
-
-	.new-board{
-		-webkit-transform: translate(0, -50%);
-		transform: translate(0, -50%);
-	}
-
-	.rotate-board{
-		-webkit-transform: rotate(180deg);
-		transform: rotate(180deg);
-	}
-}
-/*==========================*/
-@media all and (min-width: 700px){
-	#board{
-		left: 50%;
-	}
-
-	.new-board{
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
-
-	.rotate-board{
-		-webkit-transform: rotate(180deg) translate(-50%, -50%);
-		transform: rotate(180deg) translate(-50%, -50%);
 	}
 }
 

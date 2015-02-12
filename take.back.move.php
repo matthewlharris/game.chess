@@ -44,7 +44,7 @@ if( $_GET['existing_game'] == 'Y' ){
 				$white_points += $points;
 			}
 			echo "$('#" . $name . "').attr('data-occupied', 'Y');";
-			echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='" . $color . "." . $piece . ".png'>\");";
+			echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='/game.chess/" . $color . "." . $piece . ".png'>\");";
 		}
 	}
 	echo "$('#black-score .score').html('" . $black_points . "');";
@@ -52,6 +52,7 @@ if( $_GET['existing_game'] == 'Y' ){
 	echo "$('#white-score .score').html('" . $white_points . "');";	
 	echo "white_score = " . $white_points . ";";
 	echo "resize();";
+	echo "$('#ajax-spinner').fadeOut(300);";
 	if ( $_GET['rotated'] == 'Y' ) {
 		echo "$('.piece').addClass('rotate-piece');";
 	}

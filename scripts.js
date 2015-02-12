@@ -3,8 +3,8 @@ $(window).load(function(){
 	var window_width = $(window).width();
 	var window_height = $(window).height();
 	if (window_width > window_height){
-		var new_board_size = window_height * .9;
-		var new_square_size = new_board_size / 8.01;
+		var new_board_size = window_height * .85;
+		var new_square_size = new_board_size / 8;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -12,8 +12,8 @@ $(window).load(function(){
 		$('.square').css({'height' : new_square_size + 'px', 'width' : new_square_size + 'px'});
 		$('#board').css({'height' : new_board_size + 'px', 'width' : new_board_size + 'px', 'visibility' : 'visible'});
 	}else{
-		var new_board_size = window_width * .9;
-		var new_square_size = new_board_size / 8.01;
+		var new_board_size = window_width * .85;
+		var new_square_size = new_board_size / 8;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -27,8 +27,8 @@ function resize(){
 	var window_width = $(window).width();
 	var window_height = $(window).height();
 	if (window_width > window_height){
-		var new_board_size = window_height * .9;
-		var new_square_size = new_board_size / 8.01;
+		var new_board_size = window_height * .85;
+		var new_square_size = new_board_size / 8;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -36,8 +36,8 @@ function resize(){
 		$('.square').css({'height' : new_square_size + 'px', 'width' : new_square_size + 'px'});
 		$('#board').css({'height' : new_board_size + 'px', 'width' : new_board_size + 'px'});
 	}else{
-		var new_board_size = window_width * .9;
-		var new_square_size = new_board_size / 8.01;
+		var new_board_size = window_width * .85;
+		var new_square_size = new_board_size / 8;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -130,7 +130,7 @@ function get_url(){
 $('#get-url-button').click(function(){
 	get_url();
 	$('#game-url-popup').css('display', 'block');
-	$('#game-url-popup textarea').html(location.href + '?' + url);
+	$('#game-url-popup textarea').val('http://' + location.hostname + '/chess?' + url);
 	$('#game-url-popup textarea').select();
 });
 
@@ -148,21 +148,26 @@ $(window).keypress(function(e){
 
 // take back move
 $('#take-back-move-button').click(function(){
-	var take_back = $.ajax({
-		url: "take.back.move.php",
-	  type: "GET",
-	  data: "rotated=" + rotated + "&" + previous_url,
-	  dataType: "script",
-	  success: function(data){
-	  	data;
-	 	}
-	});
+	$('#ajax-spinner').fadeIn(0);
+	if( previous_url == null ){
+	$('#ajax-spinner').fadeOut(300);
+	}else{
+		var take_back = $.ajax({
+			url: "/game.chess/take.back.move.php",
+		  type: "GET",
+		  data: "rotated=" + rotated + "&" + previous_url,
+		  dataType: "script",
+		  success: function(data){
+		  	data;
+		 	}
+		});
+	}
 });
 
 
 // start new game
 $('#new-game-button').click(function(){
-	window.location.href='chess.php';
+	window.location.href='chess';
 });
 
 
