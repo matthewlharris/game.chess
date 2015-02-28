@@ -4,7 +4,7 @@ $(window).load(function(){
 	var window_height = $(window).height();
 	if (window_width > window_height){
 		var new_board_size = window_height * .85;
-		var new_square_size = new_board_size / 8;
+		var new_square_size = new_board_size / 8.01;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -13,7 +13,7 @@ $(window).load(function(){
 		$('#board').css({'height' : new_board_size + 'px', 'width' : new_board_size + 'px', 'visibility' : 'visible'});
 	}else{
 		var new_board_size = window_width * .85;
-		var new_square_size = new_board_size / 8;
+		var new_square_size = new_board_size / 8.01;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -28,7 +28,7 @@ function resize(){
 	var window_height = $(window).height();
 	if (window_width > window_height){
 		var new_board_size = window_height * .85;
-		var new_square_size = new_board_size / 8;
+		var new_square_size = new_board_size / 8.01;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
@@ -37,7 +37,7 @@ function resize(){
 		$('#board').css({'height' : new_board_size + 'px', 'width' : new_board_size + 'px'});
 	}else{
 		var new_board_size = window_width * .85;
-		var new_square_size = new_board_size / 8;
+		var new_square_size = new_board_size / 8.01;
 		var new_piece_size = new_square_size * .7;
 		var new_pawn_size = new_square_size * .6;
 		$('.piece').css('width', new_piece_size + 'px');
