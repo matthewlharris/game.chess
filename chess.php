@@ -172,6 +172,13 @@ echo "<script>var black_score = " . $black_score . "; var white_score = " . $whi
  
 <body>
 
+<div id='pawn-promotion-popup'>
+	<div class='promotion-square' data-id='queen'>Queen</div>
+	<div class='promotion-square' data-id='rook'>Rook</div>
+	<div class='promotion-square' data-id='bishop'>Bishop</div>
+	<div class='promotion-square' data-id='knight'>Knight</div>
+</div>
+
 <div id='ajax-spinner'><i class='fa fa-rotate-right fa-2x fa-spin'></i></div>
 
 <div id='page-wrapper'>
