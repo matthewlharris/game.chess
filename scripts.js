@@ -118,67 +118,31 @@ $('.square').click(function(){
 // handle promoted pawn selection
 // ==============================
 $('.promotion-square').click(function(){
-	// promote to queen
+	var piece;
 	if( $(this).attr('data-id') == 'queen' ){
-		$('#' + current_square).find('.piece').css('visibility', 'hidden');
-		$('#' + current_square).html("<img data-piece='queen' data-color='" + moving_color + "' data-points='9' class='piece' src='/game.chess/" + moving_color + ".queen.png'>");
-		resize();
-		$('#' + current_square).find('.piece').css('visibility', 'visible');
-		if( moving_color == 'black' ){
-			black_score += 8;
-			$('#black-score .score').html(black_score);
-		}else if( moving_color == 'white' ){
-			white_score += 8;
-			$('#white-score .score').html(white_score);
-		}
+		piece = 'queen';
+	}else if( $(this).attr('data-id') == 'rook' ){
+		piece = 'rook';
+	}else if( $(this).attr('data-id') == 'bishop' ){
+		piece = 'bishop';
+	}else if( $(this).attr('data-id') == 'knight' ){
+		piece = 'knight';
 	}
-	// promote to rook
-	if( $(this).attr('data-id') == 'rook' ){
-		$('#' + current_square).find('.piece').css('visibility', 'hidden');
-		$('#' + current_square).html("<img data-piece='rook' data-color='" + moving_color + "' data-points='5' class='piece' src='/game.chess/" + moving_color + ".rook.png'>");
-		resize();
-		$('#' + current_square).find('.piece').css('visibility', 'visible');
-		if( moving_color == 'black' ){
-			black_score += 4;
-			$('#black-score .score').html(black_score);
-		}else if( moving_color == 'white' ){
-			white_score += 4;
-			$('#white-score .score').html(white_score);
-		}
-	}
-	// promote to bishop
-	if( $(this).attr('data-id') == 'bishop' ){
-		$('#' + current_square).find('.piece').css('visibility', 'hidden');
-		$('#' + current_square).html("<img data-piece='bishop' data-color='" + moving_color + "' data-points='3' class='piece' src='/game.chess/" + moving_color + ".bishop.png'>");
-		resize();
-		$('#' + current_square).find('.piece').css('visibility', 'visible');
-		if( moving_color == 'black' ){
-			black_score += 2;
-			$('#black-score .score').html(black_score);
-		}else if( moving_color == 'white' ){
-			white_score += 2;
-			$('#white-score .score').html(white_score);
-		}
-	}
-	// promote to knight
-	if( $(this).attr('data-id') == 'knight' ){
-		$('#' + current_square).find('.piece').css('visibility', 'hidden');
-		$('#' + current_square).html("<img data-piece='knight' data-color='" + moving_color + "' data-points='3' class='piece' src='/game.chess/" + moving_color + ".knight.png'>");
-		resize();
-		$('#' + current_square).find('.piece').css('visibility', 'visible');
-		if( moving_color == 'black' ){
-			black_score += 2;
-			$('#black-score .score').html(black_score);
-		}else if( moving_color == 'white' ){
-			white_score += 2;
-			$('#white-score .score').html(white_score);
-		}
+	$('#' + current_square).find('.piece').css('visibility', 'hidden');
+	$('#' + current_square).html("<img data-piece='" + piece + "' data-color='" + moving_color + "' data-points='9' class='piece' src='/game.chess/" + moving_color + "." + piece + ".png'>");
+	resize();
+	$('#' + current_square).find('.piece').css('visibility', 'visible');
+	if( moving_color == 'black' ){
+		black_score += 8;
+		$('#black-score .score').html(black_score);
+	}else if( moving_color == 'white' ){
+		white_score += 8;
+		$('#white-score .score').html(white_score);
 	}
 	$('#pawn-promotion-popup').fadeOut();
-}); // end pawn promotion selection
+});
 
 
-// ==============================
 // rotate board
 var rotated = 'N';
 $('#rotate-button').click(function(){
