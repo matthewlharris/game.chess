@@ -64,7 +64,7 @@ var previous_url;
 var ready_to_move = 'N';
 var active_piece_html;
 var moving_square;
-var selected_square;
+var current_square;
 var moving_color;
 var moving_piece;
 $('.square').click(function(){
