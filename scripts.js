@@ -118,25 +118,34 @@ $('.square').click(function(){
 // handle promoted pawn selection
 // ==============================
 $('.promotion-square').click(function(){
-	var piece;
+	var piece, points, adjusted_points;
 	if( $(this).attr('data-id') == 'queen' ){
 		piece = 'queen';
+		points = 9;
 	}else if( $(this).attr('data-id') == 'rook' ){
 		piece = 'rook';
+		points = 5;
 	}else if( $(this).attr('data-id') == 'bishop' ){
 		piece = 'bishop';
+		points = 3;
 	}else if( $(this).attr('data-id') == 'knight' ){
 		piece = 'knight';
+		points = 3;
 	}
+	// subtract 1 point to account for the promoted pawn
+	adjusted_points = points - 1;
 	$('#' + current_square).find('.piece').css('visibility', 'hidden');
-	$('#' + current_square).html("<img data-piece='" + piece + "' data-color='" + moving_color + "' data-points='9' class='piece' src='/game.chess/" + moving_color + "." + piece + ".png'>");
+	$('#' + current_square).html("<img data-piece='" + piece + "' data-color='" + moving_color + "' data-points='" + points + "' class='piece' src='" + filepath + "/" + moving_color + "." + piece + ".png'>");
 	resize();
+	if( rotated == 'Y' ){
+		$('#' + current_square).find('.piece').addClass('rotate-piece');
+	}
 	$('#' + current_square).find('.piece').css('visibility', 'visible');
 	if( moving_color == 'black' ){
-		black_score += 8;
+		black_score += adjusted_points;
 		$('#black-score .score').html(black_score);
 	}else if( moving_color == 'white' ){
-		white_score += 8;
+		white_score += adjusted_points;
 		$('#white-score .score').html(white_score);
 	}
 	$('#pawn-promotion-popup').fadeOut();
@@ -173,7 +182,7 @@ function get_url(){
 $('#get-url-button').click(function(){
 	get_url();
 	$('#game-url-popup').css('display', 'block');
-	$('#game-url-popup textarea').val('http://' + location.hostname + '/chess?' + url);
+	$('#game-url-popup textarea').val('http://' + host + filepath + '/chess.php?' + url);
 	$('#game-url-popup textarea').select();
 });
 
@@ -196,7 +205,7 @@ $('#take-back-move-button').click(function(){
 	$('#ajax-spinner').fadeOut(300);
 	}else{
 		var take_back = $.ajax({
-			url: "/game.chess/take.back.move.php",
+			url: filepath + "/take.back.move.php",
 		  type: "GET",
 		  data: "rotated=" + rotated + "&" + previous_url,
 		  dataType: "script",
@@ -210,7 +219,7 @@ $('#take-back-move-button').click(function(){
 
 // start new game
 $('#new-game-button').click(function(){
-	window.location.href='chess';
+	window.location.href='chess.php';
 });
 
 
