@@ -219,7 +219,7 @@ $('#take-back-move-button').click(function(){
 
 // start new game
 $('#new-game-button').click(function(){
-	window.location.href='chess.php';
+	window.location.href=location.href;
 });
 
 
