@@ -1,7 +1,7 @@
 html, body{
 	margin: 0;
 	font-family: Helvetica, sans-serif;
-	background: url(/game.chess/light.gray.png);
+	background: url(/game.chess/images/light.gray.png);
 }
 
 .mega-octicon{

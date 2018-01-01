@@ -135,7 +135,7 @@ $('.promotion-square').click(function(){
 	// subtract 1 point to account for the promoted pawn
 	adjusted_points = points - 1;
 	$('#' + current_square).find('.piece').css('visibility', 'hidden');
-	$('#' + current_square).html("<img data-piece='" + piece + "' data-color='" + moving_color + "' data-points='" + points + "' class='piece' src='" + filepath + "/" + moving_color + "." + piece + ".png'>");
+	$('#' + current_square).html("<img data-piece='" + piece + "' data-color='" + moving_color + "' data-points='" + points + "' class='piece' src='" + filepath + "/images/" + moving_color + "." + piece + ".png'>");
 	resize();
 	if( rotated == 'Y' ){
 		$('#' + current_square).find('.piece').addClass('rotate-piece');
@@ -192,8 +192,8 @@ $('#close-url-popup').click(function(){
 });
 
 // close url popup on esc keypress
-$(window).keypress(function(e){
-	if( e.keyCode == '27' ){
+$(window).keyup(function(e) {
+	if ( e.keyCode == '27' ) {
 		$('#game-url-popup').css('display', 'none');
 	}
 });

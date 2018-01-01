@@ -47,7 +47,7 @@ if( $_GET['existing_game'] == 'Y' ){
 				$white_points += $points;
 			}
 			echo "$('#" . $name . "').attr('data-occupied', 'Y');";
-			echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='" . $filepath . "/" . $color . "." . $piece . ".png'>\");";
+			echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='" . $filepath . "/images/" . $color . "." . $piece . ".png'>\");";
 		}
 	}
 	echo "$('#black-score .score').html('" . $black_points . "');";

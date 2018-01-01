@@ -8,52 +8,52 @@ class new_game {
 public function game_board() { global $filepath; ?>
 
 <div id='a8' data-occupied='Y' class='square light'>
-				<img data-piece='rook' data-color='black' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/black.rook.png'" ?>>
+				<img data-piece='rook' data-color='black' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/images/black.rook.png'" ?>>
 		</div>
 		<div id='b8' data-occupied='Y' class='square dark'>
-				<img data-piece='knight' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/black.knight.png'" ?>>
+				<img data-piece='knight' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/black.knight.png'" ?>>
 		</div>
 		<div id='c8' data-occupied='Y' class='square light'>
-			<img data-piece='bishop' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/black.bishop.png'" ?>>
+			<img data-piece='bishop' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/black.bishop.png'" ?>>
 		</div>
 		<div id='d8' data-occupied='Y' class='square dark'>
-				<img data-piece='queen' data-color='black' data-points='9' class='piece' src=<?php echo "'" . $filepath . "/black.queen.png'" ?>>
+				<img data-piece='queen' data-color='black' data-points='9' class='piece' src=<?php echo "'" . $filepath . "/images/black.queen.png'" ?>>
 		</div>
 		<div id='e8' data-occupied='Y' class='square light'>
-				<img data-piece='king' data-color='black' data-points='0' class='piece' src=<?php echo "'" . $filepath . "/black.king.png'" ?>>
+				<img data-piece='king' data-color='black' data-points='0' class='piece' src=<?php echo "'" . $filepath . "/images/black.king.png'" ?>>
 		</div>
 		<div id='f8' data-occupied='Y' class='square dark'>
-			<img data-piece='bishop' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/black.bishop.png'" ?>>
+			<img data-piece='bishop' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/black.bishop.png'" ?>>
 		</div>
 		<div id='g8' data-occupied='Y' class='square light'>
-				<img data-piece='knight' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/black.knight.png'" ?>>
+				<img data-piece='knight' data-color='black' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/black.knight.png'" ?>>
 		</div>
 		<div id='h8' data-occupied='Y' class='square dark'>
-				<img data-piece='rook' data-color='black' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/black.rook.png'" ?>>
+				<img data-piece='rook' data-color='black' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/images/black.rook.png'" ?>>
 		</div>
 		<div id='a7' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='b7' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='c7' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='d7' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='e7' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='f7' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='g7' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='h7' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/black.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='black' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/black.pawn.png'" ?>>
 		</div>
 		<div id='a6' data-occupied='N' class='square light'></div>
 		<div id='b6' data-occupied='N' class='square dark'></div>
@@ -88,52 +88,52 @@ public function game_board() { global $filepath; ?>
 		<div id='g3' data-occupied='N' class='square dark'></div>
 		<div id='h3' data-occupied='N' class='square light'></div>
 		<div id='a2' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='b2' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='c2' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='d2' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='e2' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='f2' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='g2' data-occupied='Y' class='square light'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='h2' data-occupied='Y' class='square dark'>
-				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/white.pawn.png'" ?>>
+				<img data-piece='pawn' data-color='white' data-points='1' class='piece pawn' src=<?php echo "'" . $filepath . "/images/white.pawn.png'" ?>>
 		</div>
 		<div id='a1' data-occupied='Y' class='square dark'>
-				<img data-piece='rook' data-color='white' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/white.rook.png'" ?>>
+				<img data-piece='rook' data-color='white' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/images/white.rook.png'" ?>>
 		</div>
 		<div id='b1' data-occupied='Y' class='square light'>
-				<img data-piece='knight' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/white.knight.png'" ?>>
+				<img data-piece='knight' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/white.knight.png'" ?>>
 		</div>
 		<div id='c1' data-occupied='Y' class='square dark'>
-			<img data-piece='bishop' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/white.bishop.png'" ?>>
+			<img data-piece='bishop' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/white.bishop.png'" ?>>
 		</div>
 		<div id='d1' data-occupied='Y' class='square light'>
-				<img data-piece='queen' data-color='white' data-points='9' class='piece' src=<?php echo "'" . $filepath . "/white.queen.png'" ?>>
+				<img data-piece='queen' data-color='white' data-points='9' class='piece' src=<?php echo "'" . $filepath . "/images/white.queen.png'" ?>>
 		</div>
 		<div id='e1' data-occupied='Y' class='square dark'>
-				<img data-piece='king' data-color='white' data-points='0' class='piece' src=<?php echo "'" . $filepath . "/white.king.png'" ?>>
+				<img data-piece='king' data-color='white' data-points='0' class='piece' src=<?php echo "'" . $filepath . "/images/white.king.png'" ?>>
 		</div>
 		<div id='f1' data-occupied='Y' class='square light'>
-			<img data-piece='bishop' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/white.bishop.png'" ?>>
+			<img data-piece='bishop' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/white.bishop.png'" ?>>
 		</div>
 		<div id='g1' data-occupied='Y' class='square dark'>
-				<img data-piece='knight' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/white.knight.png'" ?>>
+				<img data-piece='knight' data-color='white' data-points='3' class='piece' src=<?php echo "'" . $filepath . "/images/white.knight.png'" ?>>
 		</div>
 		<div id='h1' data-occupied='Y' class='square light'>
-				<img data-piece='rook' data-color='white' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/white.rook.png'" ?>>
+				<img data-piece='rook' data-color='white' data-points='5' class='piece' src=<?php echo "'" . $filepath . "/images/white.rook.png'" ?>>
 		</div> 
 
 <?php } // end game board function
@@ -259,7 +259,7 @@ if ( $_GET['existing_game'] == 'Y' ) {
 				$white_points += $points;
 			}
 		echo "$('#" . $name . "').attr('data-occupied', 'Y');";
-		echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='" . $filepath . "/" . $color . "." . $piece . ".png'>\");";
+		echo "$('#" . $name . "').html(\"<img data-piece='" . $piece . "' data-color='" . $color . "' data-points='" . $points . "' class='piece " . $piece . "' src='" . $filepath . "/images/" . $color . "." . $piece . ".png'>\");";
 		} // end if else
 	} // end foreach
 	echo "$('#black-score .score').html('" . $black_points . "');";
