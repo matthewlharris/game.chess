@@ -1,9 +1,7 @@
 game.chess
-==========
-
+---
 this is one of the first projects I ever made when I was learning development around 2013. it's not very useful but i keep it here for nostalgia. if i were to make something like this today i would just make it in vanilla js.
-
-==========
+---
 this is a chess game meant to be played between 2 players that are using the same computer for taking turns, or through email correspondence via the share position link.
 
 you can:
